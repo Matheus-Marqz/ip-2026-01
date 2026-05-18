@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Pacientes</title>
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+	<link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+	<main>
+		<section class="topo">
+			<div>
+				<p>CRUD simples</p>
+				<h1>Pacientes</h1>
+			</div>
+			<button onclick="listarPacientes()">Atualizar lista</button>
+		</section>
+
+		<section class="formulario">
+			<h2>Cadastro</h2>
+
+			<form id="formPaciente">
+				<input type="hidden" id="id">
+
+				<label>
+					Nome
+					<input type="text" id="name" required>
+				</label>
+
+				<label>
+					Telefone
+					<input type="text" id="fone" required>
+				</label>
+
+				<label>
+					Data de nascimento
+					<input type="date" id="data_nasc" required>
+				</label>
+
+				<label>
+					Sexo
+					<input type="text" id="sexo" required>
+				</label>
+
+				<label>
+					Numero do convenio
+					<input type="text" id="num_convenio" required>
+				</label>
+
+				<div class="acoes">
+					<button type="submit">Salvar</button>
+					<button type="button" class="botao-secundario" onclick="limparFormulario()">Limpar</button>
+				</div>
+			</form>
+		</section>
+
+		<section class="lista">
+			<h2>Lista de pacientes</h2>
+			<div id="mensagem"></div>
+			<div id="pacientes"></div>
+		</section>
+	</main>
+
+	<script src="/static/script.js"></script>
+</body>
+</html>
